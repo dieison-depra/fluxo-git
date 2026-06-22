@@ -20,7 +20,7 @@ Este documento descreve o fluxo de trabalho "Padrão Ouro" para colaboração em
 ### 1.3 Criar ou fazer fork
 * No site do github você pode ir em repositórios e criar um novo; ou
 * Você pode acessar o link de um repositório que já existe e fazer o fork para sua própria conta, vamos usar essa abordagem:
-** Acessem https://github.com/dieison-depra-fiap/2026-engsoft-webdev
+** Acessem https://github.com/{CONTA_ORIGEM}/{REPO_ORIGINAL}
 ** Garantam que estejam logados na sua conta do github
 ** Cliquem no botão fork
 ** Escolham seu próprio nome para o repositório
@@ -30,9 +30,9 @@ Este documento descreve o fluxo de trabalho "Padrão Ouro" para colaboração em
 
 ### 2.1 Criar uma pasta de trabalho na máquina local:
 ```bash
-mkdir -p workspaces/fiap/
+mkdir -p workspaces/repo1_teste/
 git clone URL_REPO_ORIGINAL
- (ex: https://github.com/dieison-depra/2026-engsoft-webdev.git)
+ (ex: https://github.com/dieison-depra/fluxo-git.git)
 
 cd 2026-engsoft-webdev
 ```
@@ -44,7 +44,7 @@ Abra o terminal no VS Code e execute:
 
 ```bash
 # Adiciona o repositório original como "upstream"
-git remote add upstream https://github.com/dieison-depra-fiap/2026-engsoft-webdev.git
+git remote add upstream https://github.com/dieison-depra/{REPO_ORIGINAL}.git
 
 # Verifica se os remotes foram configurados corretamente (deve listar origin e upstream)
 git remote -v
