@@ -1,6 +1,6 @@
 # Guia de Workflow Colaborativo: Fork & Pull Request
 
-**(Padrão Ouro para Contribuição em Projetos FIAP)**
+**(Padrão Ouro para Contribuição em Projetos sob GITHUB)**
 
 Este fluxo segue o **Forking Workflow** — o padrão mais seguro e profissional para contribuir em repositórios que você não tem permissão de push direto (ex: repositório da disciplina).  
 Ele mantém seu fork sempre sincronizado, evita conflitos desnecessários e facilita a revisão pelo professor/coordenador.
@@ -17,7 +17,7 @@ Ele mantém seu fork sempre sincronizado, evita conflitos desnecessários e faci
 
 ### 1.1 Conta e autenticação no GitHub
 - Acesse https://github.com e crie uma conta (se ainda não tiver).  
-- Escolha um username profissional (ex: dieison-silva-fiap).  
+- Escolha um username profissional (ex: meu_projeto1).  
 - **Dica**: Ative autenticação de dois fatores (2FA) — obrigatório para segurança.
 
 ### 1.2 Instalação e configuração (Windows + VS Code)
@@ -38,22 +38,22 @@ git config --global --list
 ## ⚙️ 2. Configuração Inicial (Fork + Upstream)
 ### 2.1 Faça o Fork do repositório oficial
 
-* Acesse: https://github.com/dieison-depra-fiap/2026-engsoft-webdev
+* Acesse: https://github.com/{user_name}/{repo_name}
 * Certifique-se de estar logado na sua conta
 * Clique em Fork (canto superior direito)
 * Escolha sua conta como destino → crie o fork
-* Copie a URL HTTPS do seu fork (ex: https://github.com/SEU-USUARIO/2026-engsoft-webdev.git)
+* Copie a URL HTTPS do seu fork (ex: https://github.com/{user_name}/{repo_name}.git)
 
 ### 2.2 Clone localmente e adicione o upstream
 Crie uma pasta organizada:
 ```bash
-mkdir -p ~/workspaces/fiap/
-cd ~/workspaces/fiap/
-git clone https://github.com/SEU-USUARIO/2026-engsoft-webdev.git
-cd 2026-engsoft-webdev
+mkdir -p ~/workspaces/{repo_name/
+cd ~/workspaces/${repo_name}/
+git clone https://github.com/{user_name}/{repo_name}.git
+cd {repo_name}
 
 #Adicione o repositório oficial como upstream (faça isso só uma vez):
-git remote add upstream https://github.com/dieison-depra-fiap/2026-engsoft-webdev.git
+git remote add upstream https://github.com/{user_name}/{repo_name}.git
 
 #Verifique (deve mostrar origin e upstream):
 git remote -v
@@ -72,7 +72,7 @@ git checkout -b feat/adiciona-filtro-preco-cardapio
 ```
 
 Faça suas alterações no VS Code.
-Use Conventional Commits (padrão FIAP):
+Use Conventional Commits (sugerido):
 ```bash
 git add .
 git commit -m "feat: adiciona filtro por preço no cardápio"
@@ -122,7 +122,7 @@ git push origin feat/adiciona-filtro-preco-cardapio
 
 - Vá ao seu fork no navegador
 - Você verá um banner amarelo com Compare & pull request → clique
-- Base repository: dieison-depra-fiap/2026-engsoft-webdev
+- Base repository: {user_name}/{repo_name}
 - Compare: sua branch (feat/...)
 - Escreva um bom título e descrição:
    - O que mudou?
